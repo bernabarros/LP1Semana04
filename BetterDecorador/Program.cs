@@ -49,6 +49,11 @@ namespace BetterDecorador
             }
             return s;
         }
+        /// <summary>
+        /// No caso do utilizador não dar argumentos na consola, método dá
+        /// argumentos para imprimir mensagem a avisar.
+        /// </summary>
+        /// <returns></returns>
         private static string Decor()
         {
             string s_noinput = "User did not specify args!";
