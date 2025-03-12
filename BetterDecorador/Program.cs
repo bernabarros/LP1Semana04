@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net;
 
 namespace BetterDecorador
 {
@@ -17,8 +18,15 @@ namespace BetterDecorador
         /// <param name="args">Argumentos da linha de código</param>
         private static void Main(string[] args)
         {
-            Console.WriteLine(Decor(args[0],char.Parse(args[1]), 
-            int.Parse(args[2])));
+            if(args.Length == 0)
+            {
+                Console.WriteLine(Decor());
+            }
+            else
+            {
+               Console.WriteLine(Decor(args[0],char.Parse(args[1]), 
+            int.Parse(args[2]))); 
+            }
         }
         /// <summary>
         /// Recebe um string e altera-o inserindo um carater no inicio e fim da 
@@ -40,6 +48,15 @@ namespace BetterDecorador
                 ++num;
             }
             return s;
+        }
+        private static string Decor()
+        {
+            string s_noinput = "User did not specify args!";
+            char dec_input = '=';
+            int num_noinput = 3;
+            string response_noinput = Decor(s_noinput, dec_input, num_noinput);
+
+            return response_noinput;
         }
     }
 }
