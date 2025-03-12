@@ -37,7 +37,7 @@ namespace BetterDecorador
         /// <param name="dec">Carater a imprimir no inicio e fim</param>
         /// <param name="input_num">Número de vezes em que será inserido 
         /// o carater</param>
-        /// <returns></returns>
+        /// <returns>String com o caracter</returns>
         private static string Decor(string s, char dec, int input_num)
         {
             int num = 0;
@@ -53,7 +53,7 @@ namespace BetterDecorador
         /// No caso do utilizador não dar argumentos na consola, método dá
         /// argumentos para imprimir mensagem a avisar.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>String com o caracter</returns>
         private static string Decor()
         {
             string s_noinput = "User did not specify args!";
